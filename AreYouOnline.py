@@ -13,7 +13,6 @@ def wait_until_booted(hostname, port, timeout=300, interval=10):
     start_time = time.time()
     while time.time() - start_time < timeout:
         if is_computer_online(hostname, port):
-            print(f"{hostname} is online.")
             return True
         time.sleep(interval)
 
